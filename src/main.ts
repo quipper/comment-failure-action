@@ -1,16 +1,11 @@
 import * as core from '@actions/core'
-import {wait} from './wait'
+import {Runner} from './runner'
 
 async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
-
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
-
-    core.setOutput('time', new Date().toTimeString())
+    const api_token = core.getInput('api-token')
+    const runner = new Runner(api_token)
+    await runner.run()
   } catch (error) {
     core.setFailed(error.message)
   }
