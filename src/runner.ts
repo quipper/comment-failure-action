@@ -130,7 +130,7 @@ export class Runner {
         status: 'completed'
       }
     )
-    return response.check_runs.filter(check_run => {
+    return response.filter(check_run => {
       return check_run.conclusion === 'failure'
     }) as CheckRun[]
   }
