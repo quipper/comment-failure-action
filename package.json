@@ -1,6 +1,6 @@
 {
   "name": "comment-failure-action",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Add comments on GitHub Action failures for pull request",
   "main": "lib/main.js",
