@@ -121,7 +121,7 @@ export class Runner {
   }
 
   async find_failed_check_runs(): Promise<CheckRun[]> {
-    const respnose = await this.octokit.paginate(
+    const response = await this.octokit.paginate(
       this.octokit.checks.listForSuite,
       {
         owner: this.env.owner,
@@ -130,7 +130,7 @@ export class Runner {
         status: 'completed'
       }
     )
-    return respnose.check_runs.filter(check_run => {
+    return response.check_runs.filter(check_run => {
       return check_run.conclusion === 'failure'
     }) as CheckRun[]
   }
