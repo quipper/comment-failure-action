@@ -53,6 +53,12 @@ function run() {
             const workflow = payload.workflow.name;
             const owner = payload.repository.owner.login;
             const repo = payload.repository.name;
+            core.debug(`check_suite_id = ${check_suite_id}`);
+            core.debug(`head_branch = ${head_branch}`);
+            core.debug(`head_commit = ${head_commit}`);
+            core.debug(`workflow = ${workflow}`);
+            core.debug(`owner = ${owner}`);
+            core.debug(`repo = ${repo}`);
             const runner = new runner_1.Runner({
                 api_token,
                 check_suite_id,
@@ -60,7 +66,7 @@ function run() {
                 head_commit,
                 workflow,
                 owner,
-                repo,
+                repo
             });
             yield runner.run();
         }
