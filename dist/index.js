@@ -186,13 +186,13 @@ class Runner {
     }
     find_failed_check_runs() {
         return __awaiter(this, void 0, void 0, function* () {
-            const respnose = yield this.octokit.paginate(this.octokit.checks.listForSuite, {
+            const response = yield this.octokit.paginate(this.octokit.checks.listForSuite, {
                 owner: this.env.owner,
                 repo: this.env.repo,
                 check_suite_id: this.env.check_suite_id,
                 status: 'completed'
             });
-            return respnose.check_runs.filter(check_run => {
+            return response.filter(check_run => {
                 return check_run.conclusion === 'failure';
             });
         });
