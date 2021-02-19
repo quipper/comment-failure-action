@@ -31,4 +31,4 @@ jobs:
 
 | Name      | Required | Default | Description                                      |
 |-----------|----------|---------|--------------------------------------------------|
-| api-token | `false`  |         | GitHub API token granted `repo` or `public_repo` |
+| api-token | `true`   |         | GitHub API token granted `repo` or `public_repo` |
