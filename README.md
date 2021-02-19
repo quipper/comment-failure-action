@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: quipper/comment-failure-action@v0.0.1
         with:
-          api-token: ${{ secrets.YOUR_GITHUB_API_TOKEN }} # Replace with your secret's name
+          api-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ### Inputs
@@ -32,3 +32,6 @@ jobs:
 | Name      | Required | Default | Description                                      |
 |-----------|----------|---------|--------------------------------------------------|
 | api-token | `true`   |         | GitHub API token granted `repo` or `public_repo` |
+
+We recommend `secrets.GITHUB_TOKEN` for `api-token` because it is regenerated for each run, and its permission is limited to the repository that contains the workflow.
+For more information, please see https://docs.github.com/en/actions/reference/authentication-in-a-workflow.
