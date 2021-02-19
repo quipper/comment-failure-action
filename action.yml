@@ -1,6 +1,6 @@
 name: 'comment-failure-action'
 description: 'Add comments on GitHub Action failures for pull request'
-author: 'Your name or organization here'
+author: 'Quipper'
 inputs:
   api-token:
     required: true

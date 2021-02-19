@@ -22,7 +22,6 @@
     "node",
     "setup"
   ],
-  "author": "",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
