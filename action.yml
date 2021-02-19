@@ -5,6 +5,7 @@ inputs:
   api-token:
     required: true
     description: 'GitHub API token granted repo or public_repo'
+    default: ${{ github.token }}
 runs:
   using: 'node12'
   main: 'dist/index.js'
