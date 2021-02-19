@@ -14,7 +14,7 @@ Please see https://github.com/quipper/comment-failure-action/pull/6.
 on:
   workflow_run:
     workflows:
-      - your-workflow
+      - your-workflow  # Replace with your test workflow's name
     types: [ completed ]
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: quipper/comment-failure-action@v0.0.1
         with:
-          api-token: ${{ secrets.YOUR_GITHUB_API_TOKEN }}
+          api-token: ${{ secrets.YOUR_GITHUB_API_TOKEN }} # Replace with your secret's name
 ```
 
 ### Inputs
