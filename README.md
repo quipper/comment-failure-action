@@ -22,7 +22,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: quipper/comment-failure-action@v0.0.1
+      - uses: quipper/comment-failure-action@v0.1.0
 ```
 
 If you want to use your own personal access token, specify it with `api-token`:
@@ -39,7 +39,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: quipper/comment-failure-action@v0.0.1
+      - uses: quipper/comment-failure-action@v0.1.0
         with:
           api-token: ${{ secrets.YOUR_GITHUB_TOKEN }} # Replace with your secret's name
 ```
