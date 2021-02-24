@@ -193,7 +193,7 @@ class Runner {
                 status: 'completed'
             });
             return response.filter(check_run => {
-                return check_run.conclusion === 'failure';
+                return check_run.conclusion !== 'success' && check_run.conclusion !== 'neutral';
             });
         });
     }
