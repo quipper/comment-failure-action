@@ -1,6 +1,6 @@
 - match:
-    dependency_type: devDependencies
+    dependency_type: development
     update_type: "semver:minor"
 - match:
-    dependency_type: dependencies
+    dependency_type: production
     update_type: "semver:patch"
