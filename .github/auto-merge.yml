@@ -1,0 +1,6 @@
+- match:
+    dependency_type: devDependencies
+    update_type: "semver:minor"
+- match:
+    dependency_type: dependencies
+    update_type: "semver:patch"
