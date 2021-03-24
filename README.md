@@ -19,7 +19,6 @@ on:
 
 jobs:
   comment-failure:
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
     steps:
       - uses: quipper/comment-failure-action@v0.1.0
@@ -36,7 +35,6 @@ on:
 
 jobs:
   comment-failure:
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
     steps:
       - uses: quipper/comment-failure-action@v0.1.0
