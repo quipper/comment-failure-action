@@ -9,4 +9,4 @@ jobs:
   comment-failure:
     runs-on: ubuntu-latest
     steps:
-      - uses: quipper/comment-failure-action@v0.1.0
+      - uses: quipper/comment-failure-action@v0.1.1
