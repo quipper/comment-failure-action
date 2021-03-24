@@ -74,7 +74,7 @@ export class Runner {
       if (comment) {
         await this.update_comment(comment, section)
         core.info('Updated comment')
-      } else {
+      } else if (failed_runs.length > 0) {
         await this.create_comment(pr, section)
         core.info('Created comment')
       }
