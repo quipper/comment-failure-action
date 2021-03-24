@@ -144,7 +144,7 @@ class Runner {
                     yield this.update_comment(comment, section);
                     core.info('Updated comment');
                 }
-                else {
+                else if (failed_runs.length > 0) {
                     yield this.create_comment(pr, section);
                     core.info('Created comment');
                 }
