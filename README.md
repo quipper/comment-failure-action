@@ -21,7 +21,7 @@ jobs:
   comment-failure:
     runs-on: ubuntu-latest
     steps:
-      - uses: quipper/comment-failure-action@v0.1.0
+      - uses: quipper/comment-failure-action@v0.1.1
 ```
 
 If you want to use your own personal access token, specify it with `api-token`:
@@ -37,7 +37,7 @@ jobs:
   comment-failure:
     runs-on: ubuntu-latest
     steps:
-      - uses: quipper/comment-failure-action@v0.1.0
+      - uses: quipper/comment-failure-action@v0.1.1
         with:
           api-token: ${{ secrets.YOUR_GITHUB_TOKEN }} # Replace with your secret's name
 ```
