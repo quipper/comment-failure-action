@@ -50,3 +50,7 @@ jobs:
 
 Regarding `api-token`, we recommend you to use the default value because `github.token` is regenerated for each run, and its permission is limited to the repository that contains the workflow.
 For more information, please see https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context and https://docs.github.com/en/actions/reference/authentication-in-a-workflow.
+
+## Notice
+
+This repository was initially cloned from https://github.com/actions/typescript-action.
