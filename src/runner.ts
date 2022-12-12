@@ -77,6 +77,7 @@ export class Runner {
       } else if (failed_runs.length > 0) {
         await this.create_comment(pr, section)
         core.info('Created comment')
+        await this.add_label(pr)
       }
     }
   }
@@ -174,6 +175,17 @@ export class Runner {
       body
     })
   }
+
+  async add_label(pr: PullRequest): Promise<void> {
+
+    await this.octokit.issues.addLabels({
+      owner: this.env.owner,
+      repo: this.env.repo,
+      issue_number: pr.number,
+      labels: ["waiting-response"]
+    })
+  }
+
 
   split_body(body: string): string[] {
     return body
